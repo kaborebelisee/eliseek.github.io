@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Baowendsomdé Elisée Kaboré</title>
+  <meta name="description" content="Contactez Baowendsomdé Elisée Kaboré, ingénieur de développement rural basé à Kaya, Burkina Faso, pour toute mission de sécurité alimentaire, MEAL ou élevage.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="topo" aria-hidden="true"></div>
+
+    <div class="header-inner">
+      <nav class="site-nav">
+        <a class="brand" href="index.html">B. Elisée Kaboré</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="navList" class="nav-list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="cv/CV_KABORE_Baowendsomde_Elisee.pdf">Mon CV</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <p class="coord-tag">13.0926° N, 1.0846° O — Kaya, Région des Koulsé, Burkina Faso</p>
+        <h1>Contact</h1>
+        <p class="hero-lede">
+          Disponible pour des missions de gestion de projet, de sécurité
+          alimentaire, de MEAL ou d'appui technique en élevage.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section" id="contact-details" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <p class="eyebrow">Coordonnées</p>
+        <h2 id="contact-title">Discutons de votre projet</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <p class="card-tag">Email</p>
+            <a href="mailto:Kaborebelisee6@gmail.com">Kaborebelisee6@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <p class="card-tag">Téléphone</p>
+            <a href="tel:+22676082823">+226 76 08 28 23</a>
+          </div>
+          <div class="contact-card">
+            <p class="card-tag">Localisation</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kaya+Burkina+Faso" target="_blank" rel="noopener">Kaya, Région des Koulsé, Burkina Faso</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="languages" aria-labelledby="languages-title">
+      <div class="section-inner">
+        <p class="eyebrow">Langues</p>
+        <h2 id="languages-title">Connaissances linguistiques</h2>
+        <ul class="lang-list">
+          <li><span class="lang-name">Français</span><span>Très bon — écrit, parlé, lu</span></li>
+          <li><span class="lang-name">Mooré</span><span>Très bon — écrit, parlé, lu</span></li>
+          <li><span class="lang-name">Anglais</span><span>Niveau intermédiaire — écrit, parlé, lu</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-cta" aria-labelledby="cta-title">
+      <div class="section-inner">
+        <h2 id="cta-title">Prêt à démarrer un échange ?</h2>
+        <p>Écrivez-moi par email ou téléphone — je réponds généralement sous 48h.</p>
+        <a class="btn btn-primary" href="mailto:Kaborebelisee6@gmail.com">M'écrire un email</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Baowendsomdé Elisée Kaboré — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navList = document.getElementById('navList');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+
+</body>
+</html>

@@ -345,6 +345,173 @@ a { color: inherit; }
 }
 
 /* =========================================================
+   About — portrait + texte
+   ========================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 220px;
+}
+
+.portrait-frame img {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 6px 6px 0 var(--ochre);
+}
+
+.about-grid .about-text p:first-child { margin-top: 0; }
+
+/* =========================================================
+   Timeline — expérience
+   ========================================================= */
+.timeline {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ochre-dark);
+  white-space: nowrap;
+}
+
+.timeline-org {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+.timeline-item ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.timeline-item li { margin-bottom: 0.4rem; }
+.timeline-item li:last-child { margin-bottom: 0; }
+
+.timeline-stat {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--green);
+}
+
+/* Skills list (tags) */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.skills-list .tag { background: rgba(79,111,82,0.10); color: var(--green); }
+
+/* Education / certifications */
+.edu-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+.edu-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  justify-content: space-between;
+}
+.edu-list .edu-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ochre-dark);
+  white-space: nowrap;
+}
+.edu-list .edu-title { color: var(--ink); font-weight: 600; }
+.edu-list .edu-place { color: var(--text-muted); font-size: 0.9rem; display: block; }
+
+.cert-list {
+  columns: 2;
+  column-gap: 2.5rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+.cert-list li { margin-bottom: 0.6rem; break-inside: avoid; }
+
+/* Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.contact-card {
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.contact-card p.card-tag { margin-bottom: 0.6rem; }
+.contact-card a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--ochre);
+}
+
+.lang-list { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-muted);
+}
+.lang-list .lang-name { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .portrait-frame { width: 160px; }
+  .portrait-frame img { width: 160px; height: 160px; }
+  .cert-list { columns: 1; }
+}
+
+/* =========================================================
    Responsive
    ========================================================= */
 @media (max-width: 720px) {
